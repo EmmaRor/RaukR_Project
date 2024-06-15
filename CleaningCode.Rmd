@@ -14,35 +14,67 @@ library(tidyverse)
 
 load data
 ```{r}
-Detaljuttag_då_längd_inkl_tomfångst <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv")
 Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv")
-Catch_raw_20232019 <- as.tibble(Catch_raw_20232019)
+Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv", col_select = c(species, year, lat))
+Catch_raw_20232019 <- as_tibble(Catch_raw_20232019)
 ```
 
-selected required columns (round 1)
+selected required columns and change from , to . as decimal point
 ```{r}
-Catch_20232019 <- Catch_raw_20232019 |> select(År1, Lokal, Fångstområde, Djupstratum1, störning1, Artbestämning1, Längd1, Antal1, Vikt_uppmätt, Lat_grader, Long_grader)
+Catch_20232019 <- Catch_raw_20232019 |> select(År1, Lokal, Fångstområde, Djupstratum1, störning1, Artbestämning1, Längdgrupp, Antal1, Vikt_uppmätt, Lat_grader, Long_grader)
+
+clean_up_commas <- function(x) {
+  x <- gsub(",", ".", x)  # Replace commas with periods
+}
+
+Catch_20232019_1 <- Catch_20232019 |> 
+  mutate(
+    Vikt_uppmätt = clean_up_commas(Vikt_uppmätt),
+    Djupstratum1 = clean_up_commas(Djupstratum1))
 ```
 
 År1 - Fishing year
-Lokal - 
-Fångstområde 
-Djupstratum1
-störning1
-Artbestämning1
-Längd1
-Antal1
-Vikt_uppmätt
-Lat_grader
-Long_grader
+Lokal - Region (More general location)
+Fångstområde - Location (More specific location)
+Djupstratum1 - Net depth
+störning1 - Was the net disturbed (only want no)
+Artbestämning1 - Species
+Längdgrupp - Length (cm)
+Antal1 - Number of fish
+Vikt_uppmätt - Weight (kg)
+Lat_grader - Lat
+Long_grader - Long
 
 
 re-name columns 
 ```{r}
-
+Catch_20232019 <- Catch_20232019 |> 
+  rename(Year = År1,
+         Region = Lokal,
+         Location = Fångstområde,
+         Net_depth = Djupstratum1,
+         Disturbance = störning1,
+         Species = Artbestämning1,
+         Length_cm = Längdgrupp,
+         Number = Antal1,
+         Weight =  Vikt_uppmätt,
+         Latitude = Lat_grader,
+         Longitude = Long_grader)
 ```
 
-re-name species
+How many species are there - how abundant - decide what to remove
+```{r}
+Catch_20232019 %>%
+  count(Species)
+```
+
+Remove the species that are likely a mistake or were caught fewer than 10 times in the past 5 years
+```{r}
+Catch_20232019 <- Catch_20232019 %>%
+  filter(!Species %in% c("Ullhandskrabba", "Staksill", "Lax/öring obestämd", "Ejder", "Ål", "Tunga", "Småspigg"))
+```
+
+re-name species -- maybe -- but we can come back to this
 ```{r}
 
 ```
