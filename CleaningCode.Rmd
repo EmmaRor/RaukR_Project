@@ -14,8 +14,20 @@ library(tidyverse)
 
 load data
 ```{r}
-Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv")
-Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv", col_select = c(species, year, lat))
+Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv", col_types = cols(
+  År1 = col_double(),   # Specify 'species' as character
+  Lokal = col_character(),   # Specify 'species' as character
+  Fångstområde = col_character(),
+  Djupstratum1 = col_character(),
+  störning1 = col_character(),
+  Artbestämning1 = col_character(),
+  Längdgrupp = col_double(),
+  Antal1 = col_double(),
+  Vikt_uppmätt = col_character(),
+  Lat_grader = col_character(),
+  Long_grader = col_character(),
+))
+
 Catch_raw_20232019 <- as_tibble(Catch_raw_20232019)
 ```
 
@@ -27,10 +39,12 @@ clean_up_commas <- function(x) {
   x <- gsub(",", ".", x)  # Replace commas with periods
 }
 
-Catch_20232019_1 <- Catch_20232019 |> 
+Catch_20232019 <- Catch_20232019 |> 
   mutate(
     Vikt_uppmätt = clean_up_commas(Vikt_uppmätt),
-    Djupstratum1 = clean_up_commas(Djupstratum1))
+    Djupstratum1 = clean_up_commas(Djupstratum1),
+    Lat_grader = clean_up_commas(Lat_grader),
+    Long_grader = clean_up_commas(Long_grader))
 ```
 
 År1 - Fishing year
