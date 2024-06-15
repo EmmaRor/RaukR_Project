@@ -1,12 +1,11 @@
 ---
-title: "DataCleaningCode"
+title: "DataCleaning2"
 author: "Matilda Andersson"
 date: "2024-06-15"
 output: html_document
 ---
-
-
 Code to clean and reorganize the fish data to make it usable in a shiny app
+
 
 load packages
 ```{r}
@@ -62,10 +61,6 @@ calculate L90
 ```{r}
 
 ```
-
-
-
-
 
 
 
