@@ -15,7 +15,8 @@ library(tidyverse)
 
 load data
 ```{r}
-Catch_raw_20232019 <- read_csv("RawData/Detaljuttag då längd inkl tomfångst.csv")
+Detaljuttag_då_längd_inkl_tomfångst <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv")
+Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv")
 Catch_raw_20232019 <- as.tibble(Catch_raw_20232019)
 ```
 
