@@ -1,0 +1,70 @@
+---
+title: "DataCleaningCode"
+author: "Matilda Andersson"
+date: "2024-06-15"
+output: html_document
+---
+
+
+Code to clean and reorganize the fish data to make it usable in a shiny app
+
+load packages
+```{r}
+library(tidyverse)
+```
+
+load data
+```{r}
+Catch_raw_20232019 <- read_csv("RawData/Detaljuttag då längd inkl tomfångst.csv")
+Catch_raw_20232019 <- as.tibble(Catch_raw_20232019)
+```
+
+selected required columns (round 1)
+```{r}
+Catch_20232019 <- Catch_raw_20232019 |> select(År1, Lokal, Fångstområde, Djupstratum1, störning1, Artbestämning1, Längd1, Antal1, Vikt_uppmätt, Lat_grader, Long_grader)
+```
+
+År1 - Fishing year
+Lokal - 
+Fångstområde 
+Djupstratum1
+störning1
+Artbestämning1
+Längd1
+Antal1
+Vikt_uppmätt
+Lat_grader
+Long_grader
+
+
+re-name columns 
+```{r}
+
+```
+
+re-name species
+```{r}
+
+```
+
+group-by year:location:species:depth
+```{r}
+
+```
+
+calculate CPUE
+```{r}
+
+```
+
+calculate L90
+```{r}
+
+```
+
+
+
+
+
+
+
