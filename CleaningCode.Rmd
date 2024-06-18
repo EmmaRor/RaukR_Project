@@ -22,6 +22,7 @@ Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv"
   störning1 = col_character(),
   Artbestämning1 = col_character(),
   Längdgrupp = col_double(),
+  Station = col_double(),
   Antal1 = col_double(),
   Vikt_uppmätt = col_character(),
   Lat_grader = col_character(), # Specify as character - then remove comma and convert to number
@@ -32,7 +33,7 @@ Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv"
 
 selected required columns and change from , to . as decimal point
 ```{r}
-Catch_20232019 <- Catch_raw_20232019 %>% select(År1, Lokal, Fångstområde, Djupstratum1, störning1, Artbestämning1, Längdgrupp, Antal1, Vikt_uppmätt, Lat_grader, Long_grader)
+Catch_20232019 <- Catch_raw_20232019 %>% select(År1, Lokal, Fångstområde, Djupstratum1, störning1, Artbestämning1, Längdgrupp, Antal1, Vikt_uppmätt, Lat_grader, Long_grader, Station)
 
 clean_up_commas <- function(x) {
   x <- gsub(",", ".", x)  # Replace commas with periods
