@@ -30,14 +30,24 @@ server <- function(input, output, session) {
   min_year <- min(data$Year)
   middle_year <- round((max_year + min_year) / 2, 0)
   updateSliderInput(session, "year",
-                    min = min_year,
+                    min = min_year - 1,
                     max = max_year,
                     value = middle_year)
   
   
   # Update dataframe based on choices
   reactive_data <- reactive({
-    data[which(data$Species == input$species & data$Year == input$year), ]
+    df <- data[which(data$Species == input$species & data$Year == input$year), ]
+    
+    if (is.null(df) || nrow(df) == 0) {
+      shinyalert(title = "Error",
+                 text = paste("Something is fishy here. No data for", input$species, "in", input$year),
+                 type = "error")
+      
+      return(NULL)
+    }
+    
+    return(df)
   })
   
   reactive_marker_data <- reactive({
@@ -100,6 +110,9 @@ server <- function(input, output, session) {
     marker <- input$marker
     
     if (is.null(df) || nrow(df) == 0) {
+      leafletProxy("swedenMap", data = df) %>%
+        clearMarkers()
+      
       return(NULL)
     }
     
@@ -138,28 +151,44 @@ server <- function(input, output, session) {
   
   # Render legend items dynamically based on species and year
   output$legendSmall <- renderUI({
-    legend_text <- paste("Small Size: 0 -", round(0.25 * max(legend_categories()$n), 0))
+    legend_text <- tryCatch({
+      paste("Small Size: 0 -", round(0.25 * max(legend_categories()$n), 0))
+    }, error = function(e) {
+      paste("No data available")
+      })
     div(class = "legend-item",
         div(class = "legend-circle small"),
         legend_text)
   })
   
   output$legendMedium <- renderUI({
-    legend_text <- paste("Medium Size: ", round(0.25 * max(legend_categories()$n), 0), "-", round(0.5 * max(legend_categories()$n), 0))
+    legend_text <- tryCatch({
+      paste("Medium Size: ", round(0.25 * max(legend_categories()$n), 0), "-", round(0.5 * max(legend_categories()$n), 0))
+    }, error = function(e) {
+      paste("No data available")
+    })
     div(class = "legend-item",
         div(class = "legend-circle medium"),
         legend_text)
   })
   
   output$legendLarge <- renderUI({
-    legend_text <- paste("Large Size: ", round(0.5 * max(legend_categories()$n), 0), "-", round(0.75 * max(legend_categories()$n), 0))
+    legend_text <- tryCatch({
+      paste("Large Size: ", round(0.5 * max(legend_categories()$n), 0), "-", round(0.75 * max(legend_categories()$n), 0))
+    }, error = function(e) {
+      paste("No data available")
+    })
     div(class = "legend-item",
         div(class = "legend-circle large"),
         legend_text)
   })
   
   output$legendExtraLarge <- renderUI({
-    legend_text <- paste("Extra Large Size: ", round(0.75 * max(legend_categories()$n), 0), "-", round(max(legend_categories()$n), 0))
+    legend_text <- tryCatch({
+      paste("Extra Large Size: ", round(0.75 * max(legend_categories()$n), 0), "-", round(max(legend_categories()$n), 0))
+    }, error = function(e) {
+      paste("No data available")
+    })
     div(class = "legend-item",
         div(class = "legend-circle extra-large"),
         legend_text)
