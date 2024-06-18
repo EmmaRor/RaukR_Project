@@ -17,6 +17,10 @@ marker_data <- data.frame(
 # Define server logic
 server <- function(input, output, session) {
   
+  # Read data file
+  fish_puns <- readLines("../data/fish_puns.txt")
+  
+  
   # Initialize music state
   observe({
     if (input$toggle_music) {
@@ -96,5 +100,21 @@ server <- function(input, output, session) {
         labs(title = "Bar Plot of Medians without Error Bars", 
              x = "Category", y = "Value") 
     }
+  })
+  
+  # Define action for "Fish Puns" button
+  observeEvent(input$fish_puns_btn, {
+    # Randomly select a fish pun
+    random_pun <- sample(fish_puns, 1)
+
+    # Show the pun in a pop-up
+    showModal(
+      modalDialog(
+        title = "Fish Pun",
+        random_pun,
+        easyClose = TRUE,
+        footer = NULL
+      )
+    )
   })
 }
