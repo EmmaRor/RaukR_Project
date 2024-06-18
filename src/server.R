@@ -67,8 +67,7 @@ server <- function(input, output, session) {
       
       display_df <- df %>%
         subset(!is.na(L90_cm))
-      
-  
+
       display_df_sizes <- display_df %>%
         mutate(size_category = case_when(
           L90_cm > (0.75 * max(df$L90_cm)) ~ 20,
