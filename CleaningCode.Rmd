@@ -22,6 +22,7 @@ Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv"
   störning1 = col_character(),
   Artbestämning1 = col_character(),
   Längdgrupp = col_double(),
+  Station = col_double(),
   Antal1 = col_double(),
   Vikt_uppmätt = col_character(),
   Lat_grader = col_character(), # Specify as character - then remove comma and convert to number
@@ -32,7 +33,7 @@ Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv"
 
 selected required columns and change from , to . as decimal point
 ```{r}
-Catch_20232019 <- Catch_raw_20232019 %>% select(År1, Lokal, Fångstområde, Djupstratum1, störning1, Artbestämning1, Längdgrupp, Antal1, Vikt_uppmätt, Lat_grader, Long_grader)
+Catch_20232019 <- Catch_raw_20232019 %>% select(År1, Lokal, Fångstområde, Djupstratum1, störning1, Artbestämning1, Längdgrupp, Antal1, Vikt_uppmätt, Lat_grader, Long_grader, Station)
 
 clean_up_commas <- function(x) {
   x <- gsub(",", ".", x)  # Replace commas with periods
@@ -44,6 +45,11 @@ Catch_20232019 <- Catch_20232019 %>%
     Djupstratum1 = clean_up_commas(Djupstratum1),
     Lat_grader = clean_up_commas(Lat_grader),
     Long_grader = clean_up_commas(Long_grader))
+
+Catch_20232019 <- Catch_20232019 %>%
+  mutate(
+    Lat_grader = as.numeric(Lat_grader),
+    Long_grader = as.numeric(Long_grader))
 ```
 
 År1 - Fishing year
@@ -73,6 +79,23 @@ Catch_20232019 <- Catch_20232019 %>%
          Weight_kg =  Vikt_uppmätt,
          Latitude = Lat_grader,
          Longitude = Long_grader)
+```
+
+group by location -- calculate mean lat and lon by location --> new df
+replace existing lat and lon with newly calculated
+```{r}
+mean_coords <- Catch_20232019 %>%
+  group_by(Location) %>%
+  summarise(
+    avg_lat = mean(Latitude),
+    avg_long = mean(Longitude))
+
+Catch_20232019 <- Catch_20232019 %>%
+  left_join(mean_coords, by = "Location") %>%
+  select(-Latitude, -Longitude) %>%
+  rename(Latitude = avg_lat, Longitude = avg_long)
+
+rm(mean_coords)
 ```
 
 How many species are there - how abundant - decide what to remove
@@ -113,10 +136,14 @@ Catch_20232019 <- Catch_20232019 %>%
   filter(Net_depth != '-')
 ```
 
-
 create one row per individual -- required for the calculations
 ```{r}
 Catch_20232019 <- Catch_20232019 %>%
   uncount(Number)
+```
+
+write to .csv for further analysis
+```{r}
+write.csv(Catch_20232019, "Catch_20232019.csv", row.names = FALSE)
 ```
 
