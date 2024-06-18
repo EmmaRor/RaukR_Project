@@ -76,6 +76,14 @@ merge results and create .csv
  Results_20232019<- CPUE_results %>%
   left_join(L90, by = c("Year", "Location", "Species"))
 
+#creat a new column that has all the years with data avaliable for each location and species combination
+Results_20232019_years <- Results_20232019 %>%
+  group_by(Location, Species) %>%
+  reframe(Years = paste(unique(Year), collapse = ", "))
+
+Results_20232019 <- Results_20232019 %>%
+  left_join(Results_20232019_years %>% select(Location, Species, Years), by = c("Location", "Species"))
+
 write.csv(Results_20232019, "Results_20232019.csv", row.names = FALSE)
 ```
 
