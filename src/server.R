@@ -17,6 +17,16 @@ marker_data <- data.frame(
 # Define server logic
 server <- function(input, output, session) {
   
+  # Initialize music state
+  observe({
+    if (input$toggle_music) {
+      session$sendCustomMessage(type = "playMusic", message = list(volume = 0.5))
+    } else {
+      session$sendCustomMessage(type = "stopMusic", message = list())
+    }
+  })
+
+  
   # The map
   output$swedenMap <- renderLeaflet({
     leaflet() %>%                                     # Create a leaflet map object
@@ -29,7 +39,7 @@ server <- function(input, output, session) {
 
     if (input$marker == "Circles") {
       leafletProxy("swedenMap", data = marker_data) %>%
-        clearMarkers() %>%                    # Clear any existing markers
+        clearMarkers() %>%
         addCircleMarkers( 
           lng = ~lng, lat = ~lat,             # Set longitude and latitude
           label = ~name,                      # Label each marker
@@ -40,7 +50,7 @@ server <- function(input, output, session) {
     
     else if (input$marker == "Fish") {
       leafletProxy("swedenMap", data = marker_data) %>%
-        clearMarkers() %>%           # Clear any existing markers
+        clearMarkers() %>%
         addMarkers(                  # Add custom icon markers
           lng = ~lng, lat = ~lat,    # Set longitude and latitude
           icon = ~icons(             # Define custom icon properties

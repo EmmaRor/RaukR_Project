@@ -1,6 +1,7 @@
 library(shiny)
 library(leaflet)
 library(ggplot2)
+library(fishualize)
 
 # Define UI for application
 ui <- fluidPage(
