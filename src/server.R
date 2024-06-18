@@ -1,30 +1,14 @@
-# # Example data for bar plot
-# df <- data.frame(
-#   category = c("A", "B", "C", "D"),
-#   value = c(3, 5, 4, 6),
-#   stddev = c(0.5, 0.7, 0.6, 0.8)
-# )
-# 
-# # Sample data with latitude and longitude
-# marker_data <- data.frame(
-#   name = c("Location A", "Location B", "Location C"),
-#   lat = c(59.3293, 57.7089, 55.6049),
-#   lng = c(18.0686, 11.9746, 13.0038),
-#   value = c(30, 5, 10),
-#   category = c("A", "B", "C")
-# )
-
 # Define server logic
 server <- function(input, output, session) {
   
   # Read data file
-  data <- read.csv("../Catch_20232019.csv")
+  data <- read.csv("../Results_20232019.csv")
   fish_puns <- readLines("../data/fish_puns.txt")
   
   # These things are only done once
   species <- unique(data$Species)
   species <- species[order(species)]
-  updateSelectInput(session, "species", choices = species, selected = "Abborre")
+  updateSelectInput(session, "species", choices = species, selected = "Perch")
   
   max_year <- max(data$Year)
   min_year <- min(data$Year)
@@ -50,51 +34,52 @@ server <- function(input, output, session) {
     return(df)
   })
   
+  df_col <- reactive({
+    if (input$indicator == "Abundance"){
+      df_col <- "CPUE"
+    } else if (input$indicator == "Size"){
+      df_col <- "L90_cm"
+    }
+    
+    return(df_col)
+  })
+  
   reactive_marker_data <- reactive({
     df <- reactive_data()
+    indicator <- input$indicator
     
     if (is.null(df) || nrow(df) == 0) {
       return(NULL)
     }
     
-    display_df <- df %>%
-      group_by(Location, Latitude, Longitude) %>%
-      count()
-    
-    display_df_sizes <- display_df %>%
-      mutate(size_category = case_when(
-        n > (0.75 * max(display_df$n)) ~ 20,
-        n > (0.5 * max(display_df$n)) ~ 15,
-        n > (0.25 * max(display_df$n)) ~ 10,
-        TRUE ~ 5
-      ))
-    
+    if (indicator == "Abundance"){
+      display_df_sizes <- df %>%
+        mutate(size_category = case_when(
+          CPUE > (0.75 * max(df$CPUE)) ~ 20,
+          CPUE > (0.5 * max(df$CPUE)) ~ 15,
+          CPUE > (0.25 * max(df$CPUE)) ~ 10,
+          TRUE ~ 5
+        ))
+    } else if (indicator == "Size"){
+      shinyalert(title = "Warning",
+                 text = paste("Your data is fishy! To use the size indicator, every location with less than 50", input$species, "caught have been removed"),
+                 type = "warning")
+      
+      display_df <- df %>%
+        subset(!is.na(L90_cm))
+      
+  
+      display_df_sizes <- display_df %>%
+        mutate(size_category = case_when(
+          L90_cm > (0.75 * max(df$L90_cm)) ~ 20,
+          L90_cm > (0.5 * max(df$L90_cm)) ~ 15,
+          L90_cm > (0.25 * max(df$L90_cm)) ~ 10,
+          TRUE ~ 5
+        ))
+    }
+
     return(display_df_sizes)
   })
-  
-  # Reactive computation for legend size categories
-  legend_categories <- reactive({
-    df <- reactive_data()
-    
-    if (nrow(df) == 0) {
-      return(NULL)
-    }
-    
-    display_df <- df %>%
-      group_by(Location, Latitude, Longitude) %>%
-      count()
-    
-    max_count <- max(display_df$n)
-    
-    display_df %>%
-      mutate(size_category = case_when(
-        n > (0.75 * max_count) ~ "Extra Large",
-        n > (0.5 * max_count) ~ "Large",
-        n > (0.25 * max_count) ~ "Medium",
-        TRUE ~ "Small"
-      ))
-  })
-
   
   # The map
   output$swedenMap <- renderLeaflet({
@@ -103,7 +88,6 @@ server <- function(input, output, session) {
       setView(lng = 18.6435, lat = 60.1282, zoom = 5) # Somewhere in Sweden
   })
   
-  # The marker (fish vs circles)
   # The marker (fish vs circles)
   observe({
     df <- reactive_marker_data()
@@ -125,7 +109,7 @@ server <- function(input, output, session) {
           color = "#FA8072",
           radius = ~size_category,               # Radius size
           stroke = FALSE, fillOpacity = 0.6,     # Border and fill opacity
-          popup = ~paste0("<b>", Location, "</b><br>Amount: ", n)
+          popup = ~paste0("<b>", Location, "</b><br>Amount: ", count, "</b><br>Abundance: ", round(CPUE, 2))
         )
     } else if (marker == "Fish") {
       fish_multiplier = 3
@@ -144,7 +128,7 @@ server <- function(input, output, session) {
             popupAnchorY = 0
           ),
           label = ~Location,                     # Label each marker
-          popup = ~paste0("<b>", Location, "</b><br>Amount: ", n)
+          popup = ~paste0("<b>", Location, "</b><br>Amount: ", count, "</b><br>Abundance: ", round(CPUE, 2))
         )
     }
   })
@@ -152,7 +136,7 @@ server <- function(input, output, session) {
   # Render legend items dynamically based on species and year
   output$legendSmall <- renderUI({
     legend_text <- tryCatch({
-      paste("Small Size: 0 -", round(0.25 * max(legend_categories()$n), 0))
+      paste("Small: 0 -", round(0.25 * max(reactive_marker_data()[, df_col()]), 0))
     }, error = function(e) {
       paste("No data available")
       })
@@ -163,7 +147,7 @@ server <- function(input, output, session) {
   
   output$legendMedium <- renderUI({
     legend_text <- tryCatch({
-      paste("Medium Size: ", round(0.25 * max(legend_categories()$n), 0), "-", round(0.5 * max(legend_categories()$n), 0))
+      paste("Medium: ", round(0.25 * max(reactive_marker_data()[, df_col()]), 0), "-", round(0.5 * max(reactive_marker_data()[, df_col()]), 0))
     }, error = function(e) {
       paste("No data available")
     })
@@ -174,7 +158,7 @@ server <- function(input, output, session) {
   
   output$legendLarge <- renderUI({
     legend_text <- tryCatch({
-      paste("Large Size: ", round(0.5 * max(legend_categories()$n), 0), "-", round(0.75 * max(legend_categories()$n), 0))
+      paste("Large: ", round(0.5 * max(reactive_marker_data()[, df_col()]), 0), "-", round(0.75 * max(reactive_marker_data()[, df_col()]), 0))
     }, error = function(e) {
       paste("No data available")
     })
@@ -185,7 +169,7 @@ server <- function(input, output, session) {
   
   output$legendExtraLarge <- renderUI({
     legend_text <- tryCatch({
-      paste("Extra Large Size: ", round(0.75 * max(legend_categories()$n), 0), "-", round(max(legend_categories()$n), 0))
+      paste("Extra Large: ", round(0.75 * max(reactive_marker_data()[, df_col()]), 0), "-", round(max(reactive_marker_data()[, df_col()]), 0))
     }, error = function(e) {
       paste("No data available")
     })
