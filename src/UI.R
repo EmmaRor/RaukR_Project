@@ -2,6 +2,7 @@ library(shiny)
 library(leaflet)
 library(ggplot2)
 library(fishualize)
+library(dplyr)
 
 # Define UI for application
 ui <- fluidPage(
@@ -23,10 +24,10 @@ ui <- fluidPage(
                        inline = TRUE),
           
           # Species input
-          selectInput("species", "Species", choices = c("Red", "Blue", "Green")),
+          selectInput("species", "Species", choices = NULL),
           
           # Size/abundance input
-          selectInput("size", "Size", choices = c("Small", "Medium", "Large")),
+          selectInput("indicator", "Indicator", choices = c("Abundance", "Size"), selected = "Abundance"),
           
           # Year input
           sliderInput("year", "Year:",
@@ -52,10 +53,15 @@ ui <- fluidPage(
   ),
   
   div(id = "fish_puns",
-      actionButton("fish_puns_btn", "Fish Pun"))
+      actionButton("fish_puns_btn", "Fish Pun")),
   
-  # 
-  # div(class = "button-container",  # Container for Fish Puns button
-  #     tags$button("Fish Puns", id = "fish_puns_button", class = "btn btn-primary")
-  # )
+  # Placeholder for dynamic legend
+  div(id = "legendContainer",
+      class = "legend-container",
+      h4(class = "legend-title", "Marker Size Legend"),
+      uiOutput("legendSmall"),
+      uiOutput("legendMedium"),
+      uiOutput("legendLarge"),
+      uiOutput("legendExtraLarge")
+  )
 )

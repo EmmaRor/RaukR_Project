@@ -61,6 +61,29 @@ server <- function(input, output, session) {
     
     return(display_df_sizes)
   })
+  
+  # Reactive computation for legend size categories
+  legend_categories <- reactive({
+    df <- reactive_data()
+    
+    if (nrow(df) == 0) {
+      return(NULL)
+    }
+    
+    display_df <- df %>%
+      group_by(Location, Latitude, Longitude) %>%
+      count()
+    
+    max_count <- max(display_df$n)
+    
+    display_df %>%
+      mutate(size_category = case_when(
+        n > (0.75 * max_count) ~ "Extra Large",
+        n > (0.5 * max_count) ~ "Large",
+        n > (0.25 * max_count) ~ "Medium",
+        TRUE ~ "Small"
+      ))
+  })
 
   
   # The map
@@ -85,9 +108,10 @@ server <- function(input, output, session) {
         clearMarkers() %>%
         addCircleMarkers(
           lng = ~Longitude, lat = ~Latitude,     # Set longitude and latitude
-          label = ~Location,                     # Label each marker
+          label = ~Location,                     # Label each marker,
+          color = "#FA8072",
           radius = ~size_category,               # Radius size
-          stroke = FALSE, fillOpacity = 0.5,     # Border and fill opacity
+          stroke = FALSE, fillOpacity = 0.6,     # Border and fill opacity
           popup = ~paste0("<b>", Location, "</b><br>Amount: ", n)
         )
     } else if (marker == "Fish") {
@@ -112,65 +136,36 @@ server <- function(input, output, session) {
     }
   })
   
-  # observe({
-  # 
-  #   df <- reactive_data()
-  #   marker <- input$marker
-  #   
-  #   if (nrow(df) == 0){
-  #     return(NULL)
-  #   }
-  #   
-  #   print(unique(df$Species))
-  # 
-  #   display_df <- df %>%
-  #     group_by(Location, Latitude, Longitude) %>%
-  #     count()
-  #   
-  #   display_df_sizes <- display_df %>%
-  #     mutate(size_category = case_when(
-  #       n > (0.75 * max(display_df$n)) ~ 4,
-  #       n > (0.5 * max(display_df$n)) ~ 3,
-  #       n > (0.25 * max(display_df$n)) ~ 2,
-  #       TRUE ~ 1
-  #     ))
-  #   
-  # 
-  #   if (marker == "Circles") {
-  #     
-  #     print("Makring circles")
-  #     
-  #     leafletProxy("swedenMap", data = display_df_sizes %>%
-  #       clearMarkers() %>%
-  #       addCircleMarkers( 
-  #         lng = ~Longitude, lat = ~Latitude,             # Set longitude and latitude
-  #         label = ~Location,                      # Label each marker
-  #         radius = ~size_category,
-  #         stroke = FALSE, fillOpacity = 0.5,  # Border and fill opacity
-  #         popup = ~paste0("<b>", Location, "</b><br>Amount: ", n)
-  #       )
-  #     )
-  #   } 
-  #   
-  #   else if (marker == "Fish") {
-  #     leafletProxy("swedenMap", data = display_df_sizes) %>%
-  #       clearMarkers() %>%
-  #       addMarkers(                  # Add custom icon markers
-  #         lng = ~Longitude, lat = ~Latitude,    # Set longitude and latitude
-  #         icon = ~icons(             # Define custom icon properties
-  #           iconUrl = "https://as1.ftcdn.net/v2/jpg/06/70/58/68/1000_F_670586814_zPsLZ38T5wtVC4vDKIGNHCN8aYXPSqo1.webp",
-  #           iconWidth = ~size_category, 
-  #           iconHeight = ~size_category,
-  #           iconAnchorX = ~size_category,
-  #           iconAnchorY = ~size_category,
-  #           popupAnchorX = 0,
-  #           popupAnchorY = -size_category
-  #         ),
-  #         label = ~Location,             # Label each marker
-  #         popup = ~paste0("<b>", Location, "</b><br>Amount: ", n) 
-  #       )
-  #   }
-  # })
+  # Render legend items dynamically based on species and year
+  output$legendSmall <- renderUI({
+    legend_text <- paste("Small Size: 0 -", round(0.25 * max(legend_categories()$n), 0))
+    div(class = "legend-item",
+        div(class = "legend-circle small"),
+        legend_text)
+  })
+  
+  output$legendMedium <- renderUI({
+    legend_text <- paste("Medium Size: ", round(0.25 * max(legend_categories()$n), 0), "-", round(0.5 * max(legend_categories()$n), 0))
+    div(class = "legend-item",
+        div(class = "legend-circle medium"),
+        legend_text)
+  })
+  
+  output$legendLarge <- renderUI({
+    legend_text <- paste("Large Size: ", round(0.5 * max(legend_categories()$n), 0), "-", round(0.75 * max(legend_categories()$n), 0))
+    div(class = "legend-item",
+        div(class = "legend-circle large"),
+        legend_text)
+  })
+  
+  output$legendExtraLarge <- renderUI({
+    legend_text <- paste("Extra Large Size: ", round(0.75 * max(legend_categories()$n), 0), "-", round(max(legend_categories()$n), 0))
+    div(class = "legend-item",
+        div(class = "legend-circle extra-large"),
+        legend_text)
+  })
+  
+  
   
   # # Reactive expression for mean calculation
   # meanData <- reactive({
