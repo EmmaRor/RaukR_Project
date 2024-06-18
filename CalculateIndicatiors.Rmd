@@ -47,6 +47,8 @@ CPUE_data <- Indiv_count %>%
 
 CPUE_results <- CPUE_data %>%
   mutate(CPUE = count / Effort_Nnets)
+
+write.csv(CPUE_results_20232019, "CPUE_results.csv", row.names = FALSE)
 ```
 
 calculate L90
@@ -68,6 +70,8 @@ L90 <- L90_data %>%
 
 L90 <- L90 %>%
   filter((Ntot >= 50))
+
+write.csv(L90_20232019, "L90.csv", row.names = FALSE)
 ```
 
 

@@ -1,0 +1,628 @@
+"Year","Location","Species","median_cm","L90_cm","max_cm","Ntot"
+2019,"Asköfjärden","Herring",15,17,26,1174
+2019,"Asköfjärden","Perch",17,19,30,478
+2019,"Asköfjärden","Roach",16,20,26,380
+2019,"Asköfjärden","Ruffe",14,16.7,17,74
+2019,"Asköfjärden","Smelt",14,16,23,759
+2019,"Asköfjärden","Sprat",12,13,14,249
+2019,"Forsmark","Herring",16,18,19,90
+2019,"Forsmark","Perch",16,25,34,1178
+2019,"Forsmark","Roach",14,20,31,769
+2019,"Forsmark","Ruffe",14,15,17,109
+2019,"Forsmark","Silver bream",13,19,38,319
+2019,"Galtfjärden","Fourhorn sculpin",19,23,25,74
+2019,"Galtfjärden","Herring",15,17,20,277
+2019,"Galtfjärden","Perch",15.5,21,33,266
+2019,"Galtfjärden","Pikeperch",19,22.6,37,85
+2019,"Galtfjärden","Roach",18,23,29,507
+2019,"Galtfjärden","Ruffe",13,14,16,100
+2019,"Galtfjärden","Silver bream",17,21.2,24,99
+2019,"Gaviksfjärden","Herring",17,19,23,623
+2019,"Gaviksfjärden","Perch",22,26,38,332
+2019,"Gaviksfjärden","Roach",17,22,25,492
+2019,"Gaviksfjärden","Smelt",14,16,22,184
+2019,"Gaviksfjärden","Whitefish",29,37,41,67
+2019,"Holmön","Herring",17,17.4,21,117
+2019,"Holmön","Perch",15,26,35,521
+2019,"Holmön","Roach",14,22,29,339
+2019,"Holmön","Whitefish",31,42,49,68
+2019,"Kalvhararna","Herring",17,20.9,30,502
+2019,"Kalvhararna","Roach",23,27,31,120
+2019,"Karlskrona Ö skärgård","Bleak",12,14,16,154
+2019,"Karlskrona Ö skärgård","Herring",16,18,21,123
+2019,"Karlskrona Ö skärgård","Perch",17,20,30,1135
+2019,"Karlskrona Ö skärgård","Roach",13,21,30,466
+2019,"Kinnbäcksfjärden","Herring",16,18,20,142
+2019,"Kinnbäcksfjärden","Perch",14,23,31,621
+2019,"Kinnbäcksfjärden","Ruffe",13,15,19,418
+2019,"Kinnbäcksfjärden","Smelt",15,18,21,74
+2019,"Kinnbäcksfjärden","Vendace",14,16,20,314
+2019,"Kinnbäcksfjärden","Whitefish",23,32.1,44,190
+2019,"Kvädöfjärden","Bleak",12,13,15,108
+2019,"Kvädöfjärden","Herring",16,20.6,33,375
+2019,"Kvädöfjärden","Perch",14,24,39,804
+2019,"Kvädöfjärden","Pikeperch",16,27,43,131
+2019,"Kvädöfjärden","Roach",18,22,29,1158
+2019,"Kvädöfjärden","Ruffe",13,16,18,75
+2019,"Kvädöfjärden","Silver bream",16,22,28,312
+2019,"Lagnö","Herring",15,17,22,539
+2019,"Lagnö","Perch",15,21,31,1003
+2019,"Lagnö","Roach",19,22,33,752
+2019,"Lagnö","Ruffe",14,16,18,132
+2019,"Lagnö","Smelt",16,18,21,224
+2019,"Limön/Orarna","Bream",44,49,55,52
+2019,"Limön/Orarna","Herring",16,19,25,695
+2019,"Limön/Orarna","Perch",18.5,24,29,56
+2019,"Limön/Orarna","Roach",17,23.3,34,88
+2019,"Limön/Orarna","Smelt",18,22,25,66
+2019,"Långvindsfjärden","Herring",17,19,24,470
+2019,"Långvindsfjärden","Perch",18,27,34,498
+2019,"Långvindsfjärden","Roach",18,22.1,30,100
+2019,"Långvindsfjärden","Ruffe",15,16,18,69
+2019,"Norrbyn","Bleak",13,15,17,124
+2019,"Norrbyn","Dace",20,22,25,95
+2019,"Norrbyn","Herring",16,18,21,269
+2019,"Norrbyn","Perch",16,25,30,507
+2019,"Norrbyn","Roach",20,24.5,35,346
+2019,"Norrbyn","Ruffe",14,17,21,232
+2019,"Norrbyn","Smelt",14,17,25,419
+2019,"Norrbyn","Whitefish",26.5,39.8,49,102
+2019,"Råneå","Bleak",12,15,18,242
+2019,"Råneå","Bream",18,27,48,1126
+2019,"Råneå","Perch",16,24,41,1031
+2019,"Råneå","Roach",14,20.3000000000001,30,868
+2019,"Råneå","Ruffe",12,13,14,126
+2019,"Råneå","Vendace",14,15,17,103
+2019,"Stavstensudde","Cod",30,38.1,47,410
+2019,"Stavstensudde","Shorthorn sculpin",22,26,29,112
+2019,"Storjungfrun","Herring",16,20,29,324
+2019,"Vaxholm","Bream",33,43,45,110
+2019,"Vaxholm","Herring",16,17,21,299
+2019,"Vaxholm","Perch",13,23,41,1002
+2019,"Vaxholm","Roach",16,21,29,1735
+2019,"Vaxholm","Ruffe",14,17,19,121
+2019,"Vaxholm","Silver bream",20,23,27,76
+2019,"Vaxholm","Smelt",13,15,19,342
+2019,"Åhus SO","Cod",35,39.3,49,98
+2019,"Åhus SO","Herring",17,25,30,334
+2019,"Åhus SO","Shorthorn sculpin",25,29,30,60
+2019,"Ö Gotlands m kustvatten","European flounder",23,27,36,1132
+2019,"Ö Gotlands m kustvatten","Herring",16,18,27,510
+2019,"Ö Gotlands m kustvatten","Perch",20,23,34,484
+2019,"Ö Gotlands m kustvatten","Sprat",12,12,14,63
+2020,"Asköfjärden","Herring",15,17,28,1243
+2020,"Asköfjärden","Perch",22.5,26,31,128
+2020,"Asköfjärden","Roach",14,19,25,1080
+2020,"Asköfjärden","Smelt",15,17,21,234
+2020,"Asköfjärden","Sprat",12,13,14,296
+2020,"Forsmark","Herring",16,17,20,408
+2020,"Forsmark","Perch",15,22,34,785
+2020,"Forsmark","Roach",12,15,29,785
+2020,"Forsmark","Ruffe",13,16,17,107
+2020,"Forsmark","Silver bream",13,15,21,152
+2020,"Galtfjärden","Fourhorn sculpin",19,23,29,102
+2020,"Galtfjärden","Herring",15,17,20,409
+2020,"Galtfjärden","Perch",16,22,31,380
+2020,"Galtfjärden","Pikeperch",15,27.1,43,90
+2020,"Galtfjärden","Roach",18,24,30,554
+2020,"Galtfjärden","Ruffe",13,14,16,146
+2020,"Gaviksfjärden","Herring",16,17,26,2069
+2020,"Gaviksfjärden","Perch",18,24,31,407
+2020,"Gaviksfjärden","Roach",14,19,28,414
+2020,"Gaviksfjärden","Smelt",16,19.2,23,89
+2020,"Gaviksfjärden","Whitefish",27,35,42,82
+2020,"Holmön","Herring",16,17,19,184
+2020,"Holmön","Perch",17,25,35,943
+2020,"Holmön","Roach",14,18,31,280
+2020,"Kalvhararna","Herring",16,19,30,649
+2020,"Kalvhararna","Roach",26,29,33,154
+2020,"Kalvhararna","Smelt",17,18,20,52
+2020,"Karlskrona Ö skärgård","Bleak",13,14,16,299
+2020,"Karlskrona Ö skärgård","European flounder",23,30,35,54
+2020,"Karlskrona Ö skärgård","Herring",17,18.1,21,120
+2020,"Karlskrona Ö skärgård","Perch",23,25,30,748
+2020,"Karlskrona Ö skärgård","Roach",16,21,29,1016
+2020,"Kinnbäcksfjärden","Herring",14,17,19,130
+2020,"Kinnbäcksfjärden","Perch",17,21,30,560
+2020,"Kinnbäcksfjärden","Ruffe",13,15,19,422
+2020,"Kinnbäcksfjärden","Vendace",13,15,18,201
+2020,"Kinnbäcksfjärden","Whitefish",25,32,47,160
+2020,"Kvädöfjärden","Bleak",12,14,15,111
+2020,"Kvädöfjärden","European flounder",21,27,30,69
+2020,"Kvädöfjärden","Herring",16,18,26,787
+2020,"Kvädöfjärden","Perch",16,22,37,961
+2020,"Kvädöfjärden","Roach",15,21,28,1167
+2020,"Kvädöfjärden","Ruffe",13,15,17,196
+2020,"Kvädöfjärden","Silver bream",18,23,25,78
+2020,"Kvädöfjärden","Smelt",15,17,22,92
+2020,"Kvädöfjärden","Sprat",12,13,13,96
+2020,"Lagnö","Bleak",14,15,16,60
+2020,"Lagnö","Herring",15,17,23,987
+2020,"Lagnö","Perch",15,22,33,1365
+2020,"Lagnö","Roach",18,22,30,876
+2020,"Lagnö","Ruffe",14,16,18,102
+2020,"Lagnö","Smelt",16,20,22,150
+2020,"Lagnö","Sprat",12,13,13,56
+2020,"Licknevarpsfjärden","Bleak",12,13,14,267
+2020,"Licknevarpsfjärden","Herring",16,17,22,127
+2020,"Licknevarpsfjärden","Perch",17,25,43,685
+2020,"Licknevarpsfjärden","Roach",13,22,26,723
+2020,"Licknevarpsfjärden","Silver bream",18,22,25,300
+2020,"Limön/Orarna","Herring",16,17,33,869
+2020,"Limön/Orarna","Perch",19,27,37,84
+2020,"Limön/Orarna","Roach",17,21.9,29,272
+2020,"Limön/Orarna","Ruffe",14,17,20,199
+2020,"Limön/Orarna","Smelt",18,20,26,128
+2020,"Långvindsfjärden","Herring",16,18,23,408
+2020,"Långvindsfjärden","Perch",18,24,35,1270
+2020,"Långvindsfjärden","Roach",18,24,30,552
+2020,"Norrbyn","Herring",15,17,28,818
+2020,"Norrbyn","Perch",19,22.3,31,388
+2020,"Norrbyn","Roach",18,25,30,326
+2020,"Norrbyn","Ruffe",13,17,22,504
+2020,"Norrbyn","Smelt",15,19,24,256
+2020,"Norrbyn","Whitefish",30,38.6,51,78
+2020,"Råneå","Bleak",13,15,16,155
+2020,"Råneå","Bream",20,32,54,393
+2020,"Råneå","Perch",15,26,38,1190
+2020,"Råneå","Roach",16,24,32,606
+2020,"Råneå","Ruffe",12,13,14,89
+2020,"Seskaröfjärden","Herring",15,17,20,69
+2020,"Seskaröfjärden","Perch",19,28,42,959
+2020,"Seskaröfjärden","Roach",21,27,32,295
+2020,"Seskaröfjärden","Ruffe",12,13,15,85
+2020,"Seskaröfjärden","Vendace",15,17,18,69
+2020,"Simpevarpsområdet","Bleak",12,14,16,173
+2020,"Simpevarpsområdet","European flounder",24,29,32,54
+2020,"Simpevarpsområdet","Herring",16,17,28,672
+2020,"Simpevarpsområdet","Perch",19,24,41,701
+2020,"Simpevarpsområdet","Roach",13,20,29,1122
+2020,"Simpevarpsområdet","Ruffe",14,15,18,201
+2020,"Simpevarpsområdet","Silver bream",16,20,24,113
+2020,"Stavstensudde","Cod",29,35,54,302
+2020,"Stavstensudde","Herring",20,23,30,162
+2020,"Stavstensudde","Shorthorn sculpin",20,25,31,443
+2020,"Storjungfrun","Herring",16,21,32,656
+2020,"Syd Träskhällan","Herring",16,20,29,762
+2020,"Syd Träskhällan","Roach",15,19,23,204
+2020,"Syd Träskhällan","Round goby",14,17,34,170
+2020,"Torsås","Bleak",14,15,18,84
+2020,"Torsås","Herring",17,19,24,749
+2020,"Torsås","Roach",19,24,31,274
+2020,"Torsås","Rudd",13,19,23,77
+2020,"Torsås","Sprat",12,13,14,51
+2020,"Vaxholm","Herring",15,17,21,481
+2020,"Vaxholm","Perch",16,27,43,821
+2020,"Vaxholm","Roach",15,21,31,1177
+2020,"Vaxholm","Ruffe",14,17,21,199
+2020,"Åhus SO","Cod",32,38,47,113
+2020,"Åhus SO","European flounder",18,31,37,70
+2020,"Åhus SO","Herring",17,22,30,377
+2020,"Åhus SO","Shorthorn sculpin",23,27,30,55
+2020,"Ö Gotlands m kustvatten","Cod",20,23,40,123
+2020,"Ö Gotlands m kustvatten","European flounder",23,28,37,525
+2020,"Ö Gotlands m kustvatten","Herring",16,18,27,866
+2020,"Ö Gotlands m kustvatten","Perch",19,28,30,136
+2020,"Ö Gotlands m kustvatten","Sprat",12,12,13,348
+2021,"Asköfjärden","Herring",15,17,27,773
+2021,"Asköfjärden","Perch",17,19,33,692
+2021,"Asköfjärden","Roach",15,19,26,800
+2021,"Asköfjärden","Smelt",14,16,24,350
+2021,"Asköfjärden","Sprat",12,13,14,147
+2021,"Bulleröfjärden","Bleak",13,15,17,238
+2021,"Bulleröfjärden","Herring",16,20,28,778
+2021,"Bulleröfjärden","Perch",16,26,35,218
+2021,"Bulleröfjärden","Roach",18,22,27,110
+2021,"Bulleröfjärden","Ruffe",16,18.3,21,78
+2021,"Bulleröfjärden","Silver bream",14,17,21,52
+2021,"Bulleröfjärden","Sprat",12,13,13,69
+2021,"Finbo, Åland","Herring",13,15,18,78
+2021,"Finbo, Åland","Perch",18,27,36,1101
+2021,"Finbo, Åland","Roach",14,20,28,636
+2021,"Finbo, Åland","Silver bream",14,18,24,368
+2021,"Forsmark","Bleak",12,12,13,54
+2021,"Forsmark","Herring",14,16,21,219
+2021,"Forsmark","Perch",20,27,35,1190
+2021,"Forsmark","Roach",14,16,28,2356
+2021,"Forsmark","Ruffe",14,16,17,77
+2021,"Forsmark","Silver bream",13,15,21,680
+2021,"Galtfjärden","Fourhorn sculpin",20,22.1,30,80
+2021,"Galtfjärden","Herring",15,16,19,97
+2021,"Galtfjärden","Perch",15.5,22,30,504
+2021,"Galtfjärden","Pikeperch",18,23.3,38,208
+2021,"Galtfjärden","Roach",18,25,32,632
+2021,"Galtfjärden","Ruffe",12,14,17,175
+2021,"Galtfjärden","Silver bream",16,21,24,76
+2021,"Gaviksfjärden","Herring",14,16,28,633
+2021,"Gaviksfjärden","Perch",21,25,29,176
+2021,"Gaviksfjärden","Roach",14,20,26,301
+2021,"Gräsö","Herring",14,16,22,137
+2021,"Gräsö","Perch",21,26,34,479
+2021,"Gräsö","Roach",15,21,32,630
+2021,"Gräsö","Silver bream",14,19,26,153
+2021,"Holmön","Bleak",13,14.5,18,86
+2021,"Holmön","Herring",16,17.9,25,152
+2021,"Holmön","Perch",21,26,32,522
+2021,"Holmön","Roach",16,24,32,386
+2021,"Kalvhararna","Bleak",13,15,17,70
+2021,"Kalvhararna","Herring",16,19,29,449
+2021,"Karlskrona Ö skärgård","Bleak",14,15,16,69
+2021,"Karlskrona Ö skärgård","Herring",17,19,23,406
+2021,"Karlskrona Ö skärgård","Perch",21,29,34,162
+2021,"Karlskrona Ö skärgård","Roach",19,23.8,28,233
+2021,"Karlskrona Ö skärgård","Rudd",15,22,25,50
+2021,"Kinnbäcksfjärden","Herring",15,17,18,123
+2021,"Kinnbäcksfjärden","Perch",18,23,28,562
+2021,"Kinnbäcksfjärden","Ruffe",12,15,19,311
+2021,"Kinnbäcksfjärden","Vendace",14,16,18,194
+2021,"Kinnbäcksfjärden","Whitefish",20.5,35,45,114
+2021,"Kumlinge, Åland","Herring",13,16,23,460
+2021,"Kumlinge, Åland","Perch",17,24,35,1195
+2021,"Kumlinge, Åland","Rudd",28,33,37,174
+2021,"Kumlinge, Åland","Smelt",14,16,23,55
+2021,"Kumlinge, Åland","Sprat",12,13,13,206
+2021,"Kvädöfjärden","Bleak",12,13,15,136
+2021,"Kvädöfjärden","Herring",16,18,27,1019
+2021,"Kvädöfjärden","Perch",20,25,37,701
+2021,"Kvädöfjärden","Pikeperch",23,28,64,51
+2021,"Kvädöfjärden","Roach",14,21,26,875
+2021,"Kvädöfjärden","Ruffe",13,16,18,319
+2021,"Kvädöfjärden","Silver bream",16,21,23,82
+2021,"Kvädöfjärden","Smelt",16,19,24,94
+2021,"Kvädöfjärden","Sprat",12,13,16,486
+2021,"Kärrfjärden","Bleak",13,14,15,121
+2021,"Kärrfjärden","Herring",15,17,26,689
+2021,"Kärrfjärden","Perch",18,25,29,225
+2021,"Kärrfjärden","Roach",16,20,26,1110
+2021,"Kärrfjärden","Smelt",16,18,23,121
+2021,"Kärrfjärden","Sprat",12,13,14,297
+2021,"Lagnö","Herring",15,17,28,436
+2021,"Lagnö","Perch",15,22,36,895
+2021,"Lagnö","Roach",16,20,30,853
+2021,"Lagnö","Ruffe",14,16,18,61
+2021,"Lagnö","Silver bream",16,20,24,51
+2021,"Lagnö","Smelt",15,17,25,72
+2021,"Limön/Orarna","Herring",15,17,31,629
+2021,"Limön/Orarna","Perch",20,27,33,88
+2021,"Limön/Orarna","Roach",15,20.1,32,260
+2021,"Limön/Orarna","Ruffe",16,17,18,75
+2021,"Långvindsfjärden","Herring",15,17,21,371
+2021,"Långvindsfjärden","Perch",18,25,34,1077
+2021,"Långvindsfjärden","Roach",17,24.4,30,267
+2021,"Långvindsfjärden","Ruffe",13,16,19,99
+2021,"Norrbyn","Dace",20,22,25,91
+2021,"Norrbyn","Herring",14,16,19,520
+2021,"Norrbyn","Perch",20,25,33,207
+2021,"Norrbyn","Roach",20,25,32,472
+2021,"Norrbyn","Ruffe",13,16,21,203
+2021,"Norrbyn","Smelt",14,17,28,411
+2021,"Norrbyn","Whitefish",25,42,50,81
+2021,"Risöfjärden","Herring",14,17,18,176
+2021,"Risöfjärden","Perch",19,25,32,614
+2021,"Risöfjärden","Roach",18,26,31,374
+2021,"Råneå","Bleak",12,14,17,300
+2021,"Råneå","Bream",23,30,39,236
+2021,"Råneå","Herring",15,17,18,87
+2021,"Råneå","Perch",16,27,46,839
+2021,"Råneå","Roach",16,21,35,370
+2021,"Råneå","Ruffe",12,13,14,103
+2021,"Råneå","Vendace",14,15,16,66
+2021,"Seskaröfjärden","Herring",15,17,18,85
+2021,"Seskaröfjärden","Perch",19,28,37,1031
+2021,"Seskaröfjärden","Roach",20,25,33,392
+2021,"Seskaröfjärden","Ruffe",12,13,14,75
+2021,"Seskaröfjärden","Vendace",15,17,19,125
+2021,"Simpevarpsområdet","Bleak",12,14,16,233
+2021,"Simpevarpsområdet","Herring",15,17,24,1217
+2021,"Simpevarpsområdet","Perch",19,27,43,912
+2021,"Simpevarpsområdet","Roach",15,18,30,1234
+2021,"Simpevarpsområdet","Rudd",16,22,26,51
+2021,"Simpevarpsområdet","Ruffe",15,17,19,112
+2021,"Simpevarpsområdet","Silver bream",16,18,24,368
+2021,"Simpevarpsområdet","Sprat",12,13,13,90
+2021,"Stavstensudde","Cod",30,38.7,60,164
+2021,"Stavstensudde","Herring",18,27,32,458
+2021,"Stavstensudde","Shorthorn sculpin",21,24,32,494
+2021,"Storjungfrun","Herring",16,19,27,665
+2021,"Syd Träskhällan","Cod",22,27,43,82
+2021,"Syd Träskhällan","Herring",16,19,33,1044
+2021,"Syd Träskhällan","Roach",15,19,24,560
+2021,"Syd Träskhällan","Round goby",14,17,23,207
+2021,"Syd Träskhällan","Sprat",12,13,14,218
+2021,"Torsås","Bleak",13,14,17,138
+2021,"Torsås","Herring",16,19,29,356
+2021,"Torsås","Roach",19,24,29,126
+2021,"Torsås","Rudd",15,18,22,110
+2021,"Vaxholm","Bleak",14,16,17,100
+2021,"Vaxholm","Bream",31,42,46,85
+2021,"Vaxholm","Herring",16,18,21,261
+2021,"Vaxholm","Perch",16,26,45,1200
+2021,"Vaxholm","Roach",16,21,30,1682
+2021,"Vaxholm","Ruffe",15,17,18,156
+2021,"Vaxholm","Silver bream",18,25,32,78
+2021,"Vaxholm","Smelt",13,16,20,83
+2021,"Ytterbodafjärden","Herring",14,16,18,133
+2021,"Ytterbodafjärden","Perch",18,25,38,1117
+2021,"Ytterbodafjärden","Roach",18,27,36,1653
+2021,"Ytterbodafjärden","Ruffe",12,14,17,477
+2021,"Åhus SO","Cod",32,37,49,85
+2021,"Åhus SO","Herring",16,20,31,349
+2021,"Ö Gotlands m kustvatten","Cod",21,33,43,103
+2021,"Ö Gotlands m kustvatten","European flounder",21,27,33,589
+2021,"Ö Gotlands m kustvatten","Herring",16,19,26,715
+2021,"Ö Gotlands m kustvatten","Perch",20,26,34,491
+2021,"Ö Gotlands m kustvatten","Round goby",15,16.5,19,66
+2021,"Ö Gotlands m kustvatten","Sprat",12,13,13,69
+2022,"Asköfjärden","Bleak",12,14,15,55
+2022,"Asköfjärden","Herring",15,17,21,146
+2022,"Asköfjärden","Perch",16,23,35,704
+2022,"Asköfjärden","Roach",17,19,26,1177
+2022,"Asköfjärden","Round goby",14,16,21,84
+2022,"Asköfjärden","Smelt",15,18,24,89
+2022,"Asköfjärden","Sprat",12,13,14,89
+2022,"Finbo, Åland","Herring",14,16.6,24,55
+2022,"Finbo, Åland","Perch",18,27,38,987
+2022,"Finbo, Åland","Pikeperch",15,24,39,152
+2022,"Finbo, Åland","Roach",14,19,27,872
+2022,"Finbo, Åland","Silver bream",14,17,22,354
+2022,"Forsmark","Herring",15,17,19,468
+2022,"Forsmark","Perch",15,26,34,869
+2022,"Forsmark","Roach",15,18,26,770
+2022,"Forsmark","Ruffe",14,16,17,66
+2022,"Forsmark","Silver bream",13,16,27,565
+2022,"Galtfjärden","Herring",15,16,17,207
+2022,"Galtfjärden","Perch",17,23,42,446
+2022,"Galtfjärden","Pikeperch",18,23.9,36,172
+2022,"Galtfjärden","Roach",16,23,33,845
+2022,"Galtfjärden","Ruffe",13,14,17,207
+2022,"Gaviksfjärden","Herring",15,17,28,1097
+2022,"Gaviksfjärden","Perch",19,26,29,139
+2022,"Gaviksfjärden","Roach",15,19,29,310
+2022,"Gaviksfjärden","Smelt",13,16,20,259
+2022,"Holmön","Herring",16,17,18,148
+2022,"Holmön","Perch",20,27,34,866
+2022,"Holmön","Roach",17,21,34,401
+2022,"Holmön","Whitefish",32,40.7,51,94
+2022,"Kalvhararna","Herring",16,18,29,695
+2022,"Karlskrona Ö skärgård","Bleak",13,15,16,159
+2022,"Karlskrona Ö skärgård","Herring",17,19.7,22,234
+2022,"Karlskrona Ö skärgård","Perch",19,23,35,469
+2022,"Karlskrona Ö skärgård","Roach",21,24,29,508
+2022,"Kinnbäcksfjärden","Herring",16,17,20,221
+2022,"Kinnbäcksfjärden","Perch",18,24,31,633
+2022,"Kinnbäcksfjärden","Ruffe",13,16,18,187
+2022,"Kinnbäcksfjärden","Smelt",14,18,21,91
+2022,"Kinnbäcksfjärden","Vendace",14,16,19,248
+2022,"Kinnbäcksfjärden","Whitefish",24,30,40,178
+2022,"Kumlinge, Åland","Perch",13,21,31,2055
+2022,"Kumlinge, Åland","Rudd",27,32,36,230
+2022,"Kumlinge, Åland","Sprat",12,13,14,169
+2022,"Kvädöfjärden","Herring",16,19,26,854
+2022,"Kvädöfjärden","Perch",17,27,38,330
+2022,"Kvädöfjärden","Roach",17,22,29,459
+2022,"Kvädöfjärden","Ruffe",13,16,19,123
+2022,"Kvädöfjärden","Smelt",16,19,25,68
+2022,"Kvädöfjärden","Sprat",12,13,13,80
+2022,"Kärrfjärden","Bleak",12,13.9,16,62
+2022,"Kärrfjärden","Herring",16,20,23,165
+2022,"Kärrfjärden","Perch",14,17,32,615
+2022,"Kärrfjärden","Roach",17,20,25,642
+2022,"Kärrfjärden","Smelt",14,18.4,22,57
+2022,"Lagnö","Herring",15,16,31,470
+2022,"Lagnö","Perch",15,20,35,1503
+2022,"Lagnö","Roach",18,23,30,1122
+2022,"Lagnö","Ruffe",13,15,17,53
+2022,"Lagnö","Silver bream",16,21.6,27,65
+2022,"Lagnö","Smelt",15,18,22,71
+2022,"Lagnö","Sprat",12,13,14,197
+2022,"Limön/Orarna","Herring",15,17,23,498
+2022,"Limön/Orarna","Perch",18,26,40,208
+2022,"Limön/Orarna","Roach",15,19,30,270
+2022,"Limön/Orarna","Ruffe",15,17,19,77
+2022,"Limön/Orarna","Vimba",23,35,41,51
+2022,"Lumparn, Åland","Herring",14,15,18,174
+2022,"Lumparn, Åland","Perch",17,22,29,299
+2022,"Lumparn, Åland","Pikeperch",22,30,52,549
+2022,"Lumparn, Åland","Roach",19,23,26,220
+2022,"Lumparn, Åland","Ruffe",15,16,18,173
+2022,"Lumparn, Åland","Silver bream",15,19,25,131
+2022,"Långvindsfjärden","Herring",16,17,25,496
+2022,"Långvindsfjärden","Perch",17.5,26,34,714
+2022,"Långvindsfjärden","Roach",19,24,32,194
+2022,"Långvindsfjärden","Ruffe",14,16,17,66
+2022,"Långvindsfjärden reservat","Herring",16,17,21,83
+2022,"Långvindsfjärden reservat","Perch",20,27,33,305
+2022,"Långvindsfjärden reservat","Roach",19,25,31,92
+2022,"Norrbyn","Bleak",13,15,15,79
+2022,"Norrbyn","Dace",20,23,25,135
+2022,"Norrbyn","Herring",15,16,22,826
+2022,"Norrbyn","Perch",17,25,33,217
+2022,"Norrbyn","Roach",20,26,32,395
+2022,"Norrbyn","Ruffe",15,17,20,166
+2022,"Norrbyn","Smelt",14,16,28,643
+2022,"Norrbyn","Whitefish",26,38,47,117
+2022,"Risöfjärden","Herring",15,17,19,157
+2022,"Risöfjärden","Perch",18,25,42,1023
+2022,"Risöfjärden","Roach",17,26.7,32,424
+2022,"Risöfjärden","Smelt",13,14,17,51
+2022,"Råneå","Bleak",13,14,17,181
+2022,"Råneå","Bream",21,31,41,328
+2022,"Råneå","Perch",17,25,43,999
+2022,"Råneå","Roach",15,21,33,497
+2022,"Råneå","Ruffe",12,13,14,56
+2022,"Seskaröfjärden","Bleak",14,16,19,113
+2022,"Seskaröfjärden","Perch",19,29,40,1060
+2022,"Seskaröfjärden","Roach",20,24.6,32,325
+2022,"Seskaröfjärden","Ruffe",12,13,13,58
+2022,"Seskaröfjärden","Vendace",16,17,18,111
+2022,"Simpevarpsområdet","Bleak",13,14,15,141
+2022,"Simpevarpsområdet","Herring",16,17,21,347
+2022,"Simpevarpsområdet","Perch",18,29,44,646
+2022,"Simpevarpsområdet","Roach",17,19,28,942
+2022,"Simpevarpsområdet","Ruffe",13,16,18,244
+2022,"Simpevarpsområdet","Silver bream",18,20,29,117
+2022,"Stavstensudde","Cod",20,29,42,782
+2022,"Stavstensudde","Herring",21,27,32,165
+2022,"Stavstensudde","Round goby",16,18,22,51
+2022,"Stavstensudde","Shorthorn sculpin",21,24,30,586
+2022,"Storjungfrun","Herring",16,19,32,415
+2022,"Syd Träskhällan","Herring",16,20,27,590
+2022,"Syd Träskhällan","Perch",17,20,39,80
+2022,"Syd Träskhällan","Roach",15,18,24,414
+2022,"Syd Träskhällan","Round goby",14,17,19,107
+2022,"Syd Träskhällan","Sprat",12,12.9,13,52
+2022,"Vaxholm","Bleak",14,15.6,16,65
+2022,"Vaxholm","Bream",31,45,48,85
+2022,"Vaxholm","Herring",16,17,19,275
+2022,"Vaxholm","Perch",15,23,45,1326
+2022,"Vaxholm","Roach",15,20,33,1475
+2022,"Vaxholm","Ruffe",15,17,19,85
+2022,"Vaxholm","Silver bream",19.5,23,29,72
+2022,"Vaxholm","Smelt",13,15,20,151
+2022,"Ytterbodafjärden","Bleak",13,14,16,55
+2022,"Ytterbodafjärden","Herring",15,17,22,187
+2022,"Ytterbodafjärden","Perch",19,26,34,965
+2022,"Ytterbodafjärden","Roach",16,26,33,1150
+2022,"Ytterbodafjärden","Ruffe",13,15,18,472
+2022,"Ytterbodafjärden","Smelt",14,17,18,68
+2022,"Ytterbodafjärden","Vendace",15,16,17,72
+2022,"Ytterbodafjärden","Whitefish",21.5,38.1,50,54
+2022,"Åhus SO","Cod",32.5,39,44,52
+2022,"Åhus SO","Herring",18,22,30,275
+2022,"Ö Gotlands m kustvatten","Cod",18,29,38,141
+2022,"Ö Gotlands m kustvatten","European flounder",21,27,33,629
+2022,"Ö Gotlands m kustvatten","Herring",16,18,30,697
+2022,"Ö Gotlands m kustvatten","Perch",20.5,26,33,56
+2022,"Ö Gotlands m kustvatten","Round goby",15,18,21,165
+2023,"Asköfjärden","Herring",16,17,28,263
+2023,"Asköfjärden","Perch",14,21,31,1114
+2023,"Asköfjärden","Roach",18,20,28,612
+2023,"Asköfjärden","Round goby",14,17,19,72
+2023,"Asköfjärden","Smelt",14,17,23,206
+2023,"Asköfjärden","Sprat",12,13,14,191
+2023,"Bulleröfjärden","Bleak",13,15,16,94
+2023,"Bulleröfjärden","Herring",16,21,26,802
+2023,"Bulleröfjärden","Perch",19,23,31,240
+2023,"Bulleröfjärden","Roach",22,26,36,323
+2023,"Bulleröfjärden","Ruffe",15,17,20,227
+2023,"Bulleröfjärden","Sprat",12,13,13,51
+2023,"Finbo, Åland","Perch",19,27,38,1120
+2023,"Finbo, Åland","Pikeperch",19,30.1,40,60
+2023,"Finbo, Åland","Roach",15,21,30,564
+2023,"Finbo, Åland","Silver bream",14,18,22,446
+2023,"Forsmark","Herring",16,17,20,442
+2023,"Forsmark","Perch",18,21,34,677
+2023,"Forsmark","Roach",16,19.2,25,229
+2023,"Forsmark","Ruffe",13,15.9,18,82
+2023,"Galtfjärden","Fourhorn sculpin",20,24,28,77
+2023,"Galtfjärden","Herring",15,17,26,103
+2023,"Galtfjärden","Perch",17,21,32,455
+2023,"Galtfjärden","Pikeperch",19,24.6,35,135
+2023,"Galtfjärden","Roach",17,24,31,804
+2023,"Galtfjärden","Ruffe",13,14.2,17,129
+2023,"Galtfjärden","Silver bream",16,21,26,118
+2023,"Galtfjärden","Sprat",12,13,13,71
+2023,"Gaviksfjärden","Herring",15,17,26,419
+2023,"Gaviksfjärden","Perch",17,23,31,263
+2023,"Gaviksfjärden","Roach",14,19,27,651
+2023,"Gaviksfjärden","Smelt",15,18,22,409
+2023,"Holmön","Bleak",13,14,17,83
+2023,"Holmön","Herring",16,17,18,80
+2023,"Holmön","Perch",17,28,40,1016
+2023,"Holmön","Roach",16,22,35,411
+2023,"Kalvhararna","Herring",16,18,28,715
+2023,"Karlskrona Ö skärgård","Bleak",14,15,16,156
+2023,"Karlskrona Ö skärgård","Herring",18,20,23,377
+2023,"Karlskrona Ö skärgård","Perch",18,22,29,341
+2023,"Karlskrona Ö skärgård","Roach",22,25,29,581
+2023,"Kinnbäcksfjärden","Herring",16,17,19,179
+2023,"Kinnbäcksfjärden","Perch",18,24,31,399
+2023,"Kinnbäcksfjärden","Ruffe",13,16,19,239
+2023,"Kinnbäcksfjärden","Vendace",13,15,18,89
+2023,"Kinnbäcksfjärden","Whitefish",23,34,42,142
+2023,"Kumlinge, Åland","Herring",14,16.1,25,280
+2023,"Kumlinge, Åland","Perch",15,20,31,1787
+2023,"Kumlinge, Åland","Rudd",29,33,38,77
+2023,"Kumlinge, Åland","Smelt",14,16,17,51
+2023,"Kumlinge, Åland","Sprat",12,13,13,95
+2023,"Kvädöfjärden","Herring",16,19,27,695
+2023,"Kvädöfjärden","Perch",21,30,36,208
+2023,"Kvädöfjärden","Roach",18,22,28,768
+2023,"Kvädöfjärden","Ruffe",13,16,19,120
+2023,"Kvädöfjärden","Smelt",15,20,22,73
+2023,"Kärrfjärden","Bleak",12,14,14,80
+2023,"Kärrfjärden","Herring",16,20,27,476
+2023,"Kärrfjärden","Perch",18,22,26,157
+2023,"Kärrfjärden","Roach",18,21,27,1034
+2023,"Kärrfjärden","Smelt",14,17,22,197
+2023,"Lagnö","Herring",15,16,25,830
+2023,"Lagnö","Perch",17,22,37,1132
+2023,"Lagnö","Roach",18,23,30,1204
+2023,"Lagnö","Ruffe",13,15,19,76
+2023,"Lagnö","Silver bream",14,21,25,57
+2023,"Lagnö","Smelt",15,19,21,53
+2023,"Licknevarpsfjärden","Herring",16,18,25,108
+2023,"Licknevarpsfjärden","Perch",22,35,43,245
+2023,"Licknevarpsfjärden","Roach",18,23,30,532
+2023,"Licknevarpsfjärden","Silver bream",19,23,28,207
+2023,"Limön/Orarna","Herring",16,17,26,453
+2023,"Limön/Orarna","Roach",17,19.7,26,84
+2023,"Limön/Orarna","Ruffe",14,17,18,53
+2023,"Limön/Orarna","Smelt",17,21,25,61
+2023,"Lumparn, Åland","Herring",14,16,16,64
+2023,"Lumparn, Åland","Perch",17,23,31,291
+2023,"Lumparn, Åland","Pikeperch",21,30,40,282
+2023,"Lumparn, Åland","Roach",19,22,29,318
+2023,"Lumparn, Åland","Ruffe",15,17,18,148
+2023,"Lumparn, Åland","Silver bream",16,20,24,137
+2023,"Långvindsfjärden","Herring",16,17,22,184
+2023,"Långvindsfjärden","Perch",16,23,32,1450
+2023,"Långvindsfjärden","Roach",19,25,32,480
+2023,"Långvindsfjärden","Ruffe",13,16,18,74
+2023,"Långvindsfjärden reservat","Herring",16,17,18,55
+2023,"Långvindsfjärden reservat","Perch",17,24,34,457
+2023,"Långvindsfjärden reservat","Roach",19,23,33,154
+2023,"Norrbyn","Dace",18,24,26,109
+2023,"Norrbyn","Herring",16,17,28,288
+2023,"Norrbyn","Perch",18,23,31,546
+2023,"Norrbyn","Roach",21,27,32,430
+2023,"Norrbyn","Ruffe",12,16,19,121
+2023,"Norrbyn","Smelt",14,16,27,153
+2023,"Norrbyn","Whitefish",25,39,48,104
+2023,"Risöfjärden","Herring",16,17,18,76
+2023,"Risöfjärden","Perch",18,25,41,920
+2023,"Risöfjärden","Roach",15,24,33,678
+2023,"Råneå","Bleak",13,15,17,123
+2023,"Råneå","Bream",21,29,43,329
+2023,"Råneå","Perch",17,27,44,975
+2023,"Råneå","Roach",17,22,31,331
+2023,"Råneå","Vendace",12,15,17,101
+2023,"Seskaröfjärden","Bleak",15,16,19,70
+2023,"Seskaröfjärden","Perch",19,28,40,1116
+2023,"Seskaröfjärden","Roach",20,25,33,438
+2023,"Seskaröfjärden","Ruffe",12,13,14,114
+2023,"Seskaröfjärden","Smelt",18,21.8,23,53
+2023,"Seskaröfjärden","Vendace",16,17,20,173
+2023,"Simpevarpsområdet","Bleak",13,14,16,100
+2023,"Simpevarpsområdet","Herring",16,19,26,454
+2023,"Simpevarpsområdet","Perch",21,28,41,236
+2023,"Simpevarpsområdet","Roach",17,20,30,636
+2023,"Simpevarpsområdet","Ruffe",14,16,19,142
+2023,"Simpevarpsområdet","Silver bream",18,21,24,96
+2023,"Storjungfrun","Herring",16,18,37,654
+2023,"Syd Träskhällan","Bleak",13,14,15,61
+2023,"Syd Träskhällan","Herring",16,21.1,29,450
+2023,"Syd Träskhällan","Perch",15,22,28,182
+2023,"Syd Träskhällan","Roach",15,18,28,396
+2023,"Syd Träskhällan","Round goby",13,16,18,80
+2023,"Vaxholm","Herring",16,18,21,271
+2023,"Vaxholm","Perch",15,26,44,530
+2023,"Vaxholm","Roach",16,20,29,863
+2023,"Vaxholm","Ruffe",13,16,18,100
+2023,"Vaxholm","Smelt",13,15.7,19,54
+2023,"Åhus SO","Cod",30,36,47,74
+2023,"Åhus SO","Herring",20,26.5,30,176
+2023,"Åhus SO","Shorthorn sculpin",22,26,30,161
+2023,"Ö Gotlands m kustvatten","Cod",29,35,39,111
+2023,"Ö Gotlands m kustvatten","European flounder",22,27,36,254
+2023,"Ö Gotlands m kustvatten","Herring",17,19.5,26,636
