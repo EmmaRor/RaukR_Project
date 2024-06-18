@@ -29,6 +29,8 @@ Catch_raw_20232019 <- read_csv("data/Detaljuttag då längd inkl tomfångst.csv"
   Long_grader = col_character(), # Specify as character - then remove comma and convert to number
 ))
 
+EnglishNames <- read_csv("data/FishNamesEnglish.csv")
+
 ```
 
 selected required columns and change from , to . as decimal point
@@ -52,6 +54,7 @@ Catch_20232019 <- Catch_20232019 %>%
     Long_grader = as.numeric(Long_grader))
 ```
 
+
 År1 - Fishing year
 Lokal - Region (More general location)
 Fångstområde - Location (More specific location)
@@ -65,8 +68,9 @@ Lat_grader - Lat
 Long_grader - Long
 
 
-re-name columns 
+re-name things 
 ```{r}
+#rename columns
 Catch_20232019 <- Catch_20232019 %>% 
   rename(Year = År1,
          Region = Lokal,
@@ -79,6 +83,12 @@ Catch_20232019 <- Catch_20232019 %>%
          Weight_kg =  Vikt_uppmätt,
          Latitude = Lat_grader,
          Longitude = Long_grader)
+
+#rename species to english names
+Catch_20232019 <- Catch_20232019 %>%
+  left_join(EnglishNames, by = "Species") %>%
+  mutate(Species = Species_Eng) %>%
+  select(-Species_Eng)
 ```
 
 group by location -- calculate mean lat and lon by location --> new df
